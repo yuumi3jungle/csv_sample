@@ -4,22 +4,23 @@ ja:
       player: 選手
     attributes:
       player:
+        id: ID
         name: 名前
         position: 守備
-        no: NO
+        "no" : 背番号
         born: 生年月日
 
   players:
     index:
       name: 名前
       position: 守備
-      no: NO
+      "no" : 背番号
       born: 生年月日
     show:
       name: 名前
       position: 守備
-      no: NO
+      "no" : 背番号
       born: 生年月日
-      id: id
+      id: ID
       created_at: 作成日時
       updated_at: 更新日時
