@@ -2,6 +2,8 @@ Rails.application.routes.draw do
   resources :players do
     collection do
       get :download
+      get :new_upload
+      post :create_upload
     end
   end
   root 'players#index'

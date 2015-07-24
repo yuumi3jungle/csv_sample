@@ -49,6 +49,22 @@ class PlayersController < ApplicationController
     send_data Player.csv_all, type: 'text/csv; charset=shift_jis', filename: "players.csv"
   end
 
+  def new_upload
+    @csv_errors = []
+  end
+
+  def create_upload
+    players, errors = Player.import(params[:csv_file].read)
+    errors = Player.merge(players)  unless errors.any?
+
+    if errors.any?
+      @csv_errors = errors
+      render :new_upload
+    else
+      redirect_to players_url, notice: 'Player was successfully uploaded.'
+    end
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_player
