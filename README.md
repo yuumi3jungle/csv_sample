@@ -5,6 +5,7 @@
 * Simple Ruby on Rails Application
 * Upload and Download CSV file
 * RSpec
+  * FactoyGirl
 
 
 
