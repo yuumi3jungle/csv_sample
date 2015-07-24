@@ -1,0 +1,25 @@
+ja:
+  activerecord:
+    models:
+      player: 選手
+    attributes:
+      player:
+        name: 名前
+        position: 守備
+        no: NO
+        born: 生年月日
+
+  players:
+    index:
+      name: 名前
+      position: 守備
+      no: NO
+      born: 生年月日
+    show:
+      name: 名前
+      position: 守備
+      no: NO
+      born: 生年月日
+      id: id
+      created_at: 作成日時
+      updated_at: 更新日時
