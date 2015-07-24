@@ -45,6 +45,10 @@ class PlayersController < ApplicationController
     redirect_to players_url, notice: 'Player was successfully destroyed.'
   end
 
+  def download
+    send_data Player.csv_all, type: 'text/csv; charset=shift_jis', filename: "players.csv"
+  end
+
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_player

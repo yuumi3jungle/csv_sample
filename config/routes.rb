@@ -1,5 +1,9 @@
 Rails.application.routes.draw do
-  resources :players
+  resources :players do
+    collection do
+      get :download
+    end
+  end
   root 'players#index'
 
   # The priority is based upon order of creation: first created -> highest priority.
